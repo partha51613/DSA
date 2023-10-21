@@ -27,5 +27,5 @@ public class LongestSubArrayWithSumK{
         int[] arr = new int[]{4,1,2,1,2,7,7,4,5,5,13};
         int k=5;
         System.out.println(longSubArr(arr,k));
-        }
+    }
 }
