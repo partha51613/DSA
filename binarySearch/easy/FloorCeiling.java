@@ -16,13 +16,12 @@ Explanation: The floor of 8 in the array is 8, and the ceiling of 8 in the array
  public class FloorCeiling{
     public static void main(String[] args) {
         int[] arr = new int[] {3, 4, 4, 7, 8, 10};
-        int target = 8;
+        int target = 5;
         int n=6;
         System.out.println("Floor is: " +floorSearch(arr,n,target));
         System.out.println("Ceiling is: " +ceilingSearch(arr,n,target));
     }
 
-    //Lower bound is the floor
     public static int floorSearch(int[] arr, int n, int target){
         int low=0;
         int high=n-1;
@@ -45,7 +44,7 @@ Explanation: The floor of 8 in the array is 8, and the ceiling of 8 in the array
         int ceilingIndex=0;
         while(low<=high){
             int mid = (low+high)/2;
-            if (arr[mid]>target){
+            if (arr[mid]>=target){
                 ceilingIndex = mid;
                 high=mid-1;
             }else{
