@@ -1,5 +1,7 @@
 /**
  * Maximum Subarray Sum in an Array
+ * 
+ * Kadane Algorithm
  */
 
 public class KadaneAlgo {
