@@ -1,7 +1,7 @@
 public class OccurenceOfX {
     public static void main(String[] args) {
         int[] arr = new int[] {1,1,1,2,2,2,3,4,6,6,6};
-        int target = 6;
+        int target = 1;
         int n=arr.length;
         int floor=fs(arr,n,target);
         int ceil=cs(arr,n,target);
@@ -18,12 +18,15 @@ public class OccurenceOfX {
         int ans=-1;
         while(low<=high){
             int mid = (low+high)/2;
-            if(arr[mid]<=target){
+            if(arr[mid]==target){
                 ans=mid;
                 low=mid+1;
             }
-            else{
+            else if(arr[mid]>target){
                 high=mid-1;
+            }
+            else{
+                low=mid+1;
             }
         }
         return ans;
@@ -36,8 +39,11 @@ public class OccurenceOfX {
         int ans=-1;
         while(low<=high){
             int mid = (low+high)/2;
-            if(arr[mid]>=target){
+            if(arr[mid]==target){
                 ans=mid;
+                high=mid-1;
+            }
+            else if(arr[mid]>target){
                 high=mid-1;
             }
             else{
