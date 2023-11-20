@@ -11,7 +11,7 @@ public class DisplayMissingNumbers {
 		int max=0;     
          System.out.println("Enter Elements");
 		for(int i=0;i<n;i++){
-			arr[i] = sc.nextInt();5
+			arr[i] = sc.nextInt();
 		}
 
 		//Find the max number
